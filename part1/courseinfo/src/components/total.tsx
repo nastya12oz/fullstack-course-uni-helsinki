@@ -1,11 +1,12 @@
 import React from "react"
 
 function Total({parts}): JSX.Element {
-
-  const totalExercises = parts.reduce((sum, part) => sum + part.exercises, 0)
-  
+  const [
+    { exercises: exercises1 }, 
+    { exercises: exercises2 }, 
+    { exercises: exercises3 }] = parts;
   return(
-    <h3>total of {totalExercises} exercises</h3>
+    <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
   )
 }
 
